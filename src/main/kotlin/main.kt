@@ -63,4 +63,36 @@ fun main(args: Array<String>) {
         println()
     }
     println("--Films collection END --")
+
+    // Set
+    val usersID = setOf("1010", "1020", "1030", "1040")
+    println(usersID)
+
+    println(usersID.contains("1010"))
+
+    val mutableIDs = usersID.toMutableSet()
+    println(mutableIDs.remove("1010"))
+    println(mutableIDs)
+
+    mutableIDs.add("1010")
+    println(mutableIDs.add("1020"))
+    println(mutableIDs)
+
+    for (userID in mutableIDs) {
+        println(userID)
+    }
+
+    println("--NAMES-")
+    val names = arrayOf("Seb", "Nathan", "Julie", "Charlotte", "Seb")
+    for (name in names) {
+        println(name)
+    }
+    println("--UNIQUE NAMES-")
+
+    val uniqueNames = names.toSet()
+    for (name in uniqueNames) {
+        println(name)
+    }
+    println("---")
+
 }
